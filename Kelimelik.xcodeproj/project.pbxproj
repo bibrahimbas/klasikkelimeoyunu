@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21036D2D1FA73EE50029B70D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21036D2C1FA73EE50029B70D /* AppDelegate.swift */; };
+		21036D2F1FA73EE50029B70D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21036D2E1FA73EE50029B70D /* ViewController.swift */; };
+		21036D321FA73EE50029B70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21036D301FA73EE50029B70D /* Main.storyboard */; };
+		21036D351FA73EE50029B70D /* Kelimelik.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21036D331FA73EE50029B70D /* Kelimelik.xcdatamodeld */; };
+		21036D371FA73EE50029B70D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21036D361FA73EE50029B70D /* Assets.xcassets */; };
+		21036D3A1FA73EE50029B70D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21036D381FA73EE50029B70D /* LaunchScreen.storyboard */; };
+		21036D451FA73EE50029B70D /* KelimelikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21036D441FA73EE50029B70D /* KelimelikTests.swift */; };
+		21036D501FA73EE50029B70D /* KelimelikUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21036D4F1FA73EE50029B70D /* KelimelikUITests.swift */; };
+		21036D5F1FA747E30029B70D /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21036D5E1FA747E30029B70D /* LoginManager.swift */; };
+		21036D601FA774440029B70D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21036D611FA774440029B70D /* FBSDKCoreKit.framework */; };
+		21036D621FA7744B0029B70D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21036D631FA7744B0029B70D /* FBSDKLoginKit.framework */; };
+		21036D661FA77DA90029B70D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21036D651FA77DA90029B70D /* LoginViewController.swift */; };
+		2119B93D1FB1AAB00060E2EE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119B93C1FB1AAB00060E2EE /* GameViewController.swift */; };
+		2119B93F1FB1C7600060E2EE /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2119B93E1FB1C7600060E2EE /* Question.swift */; };
+		212921C21FA8924200070792 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C11FA8924200070792 /* User.swift */; };
+		212921C41FA8B8ED00070792 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C31FA8B8ED00070792 /* Constants.swift */; };
+		212921C61FA8BD4D00070792 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C51FA8BD4D00070792 /* WelcomeViewController.swift */; };
+		21E671731FAB494900C6F59A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671721FAB494900C6F59A /* JSONManager.swift */; };
+		21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671751FAB4D3B00C6F59A /* DummyApiService.swift */; };
+		21E671781FAB672000C6F59A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671771FAB672000C6F59A /* Utilities.swift */; };
+		7EC0B76E0E28340183E109D9 /* Pods_Kelimelik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21036D411FA73EE50029B70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21036D211FA73EE50029B70D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21036D281FA73EE50029B70D;
+			remoteInfo = Kelimelik;
+		};
+		21036D4C1FA73EE50029B70D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21036D211FA73EE50029B70D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21036D281FA73EE50029B70D;
+			remoteInfo = Kelimelik;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07A5D92A9406EBFFBD06C7AB /* Pods-Kelimelik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelimelik.release.xcconfig"; path = "Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik.release.xcconfig"; sourceTree = "<group>"; };
+		21036D291FA73EE50029B70D /* Kelimelik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kelimelik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21036D2C1FA73EE50029B70D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21036D2E1FA73EE50029B70D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21036D311FA73EE50029B70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21036D341FA73EE50029B70D /* Kelimelik.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Kelimelik.xcdatamodel; sourceTree = "<group>"; };
+		21036D361FA73EE50029B70D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21036D391FA73EE50029B70D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21036D3B1FA73EE50029B70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21036D401FA73EE50029B70D /* KelimelikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KelimelikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21036D441FA73EE50029B70D /* KelimelikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelimelikTests.swift; sourceTree = "<group>"; };
+		21036D461FA73EE50029B70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21036D4B1FA73EE50029B70D /* KelimelikUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KelimelikUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21036D4F1FA73EE50029B70D /* KelimelikUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KelimelikUITests.swift; sourceTree = "<group>"; };
+		21036D511FA73EE50029B70D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21036D5E1FA747E30029B70D /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		21036D611FA774440029B70D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21036D631FA7744B0029B70D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21036D651FA77DA90029B70D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2119B93C1FB1AAB00060E2EE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2119B93E1FB1C7600060E2EE /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		212921C11FA8924200070792 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		212921C31FA8B8ED00070792 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		212921C51FA8BD4D00070792 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2171DD33B693BFC6B22E8557 /* Pods-Kelimelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelimelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik.debug.xcconfig"; sourceTree = "<group>"; };
+		21E671721FAB494900C6F59A /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		21E671751FAB4D3B00C6F59A /* DummyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyApiService.swift; sourceTree = "<group>"; };
+		21E671771FAB672000C6F59A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelimelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21036D261FA73EE50029B70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21036D621FA7744B0029B70D /* FBSDKLoginKit.framework in Frameworks */,
+				21036D601FA774440029B70D /* FBSDKCoreKit.framework in Frameworks */,
+				7EC0B76E0E28340183E109D9 /* Pods_Kelimelik.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21036D3D1FA73EE50029B70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21036D481FA73EE50029B70D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		154F38B9820B492BE690362E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2171DD33B693BFC6B22E8557 /* Pods-Kelimelik.debug.xcconfig */,
+				07A5D92A9406EBFFBD06C7AB /* Pods-Kelimelik.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		21036D201FA73EE50029B70D = {
+			isa = PBXGroup;
+			children = (
+				21036D2B1FA73EE50029B70D /* Kelimelik */,
+				21036D431FA73EE50029B70D /* KelimelikTests */,
+				21036D4E1FA73EE50029B70D /* KelimelikUITests */,
+				21036D2A1FA73EE50029B70D /* Products */,
+				154F38B9820B492BE690362E /* Pods */,
+				7DD51985383184CFD675A4E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		21036D2A1FA73EE50029B70D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21036D291FA73EE50029B70D /* Kelimelik.app */,
+				21036D401FA73EE50029B70D /* KelimelikTests.xctest */,
+				21036D4B1FA73EE50029B70D /* KelimelikUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21036D2B1FA73EE50029B70D /* Kelimelik */ = {
+			isa = PBXGroup;
+			children = (
+				21E671741FAB4D1100C6F59A /* Helpers */,
+				21036D641FA77D8C0029B70D /* Controllers */,
+				21036D5D1FA747C90029B70D /* Classes */,
+				21036D2C1FA73EE50029B70D /* AppDelegate.swift */,
+				21036D2E1FA73EE50029B70D /* ViewController.swift */,
+				21036D301FA73EE50029B70D /* Main.storyboard */,
+				21036D361FA73EE50029B70D /* Assets.xcassets */,
+				21036D381FA73EE50029B70D /* LaunchScreen.storyboard */,
+				21036D3B1FA73EE50029B70D /* Info.plist */,
+				21036D331FA73EE50029B70D /* Kelimelik.xcdatamodeld */,
+			);
+			path = Kelimelik;
+			sourceTree = "<group>";
+		};
+		21036D431FA73EE50029B70D /* KelimelikTests */ = {
+			isa = PBXGroup;
+			children = (
+				21036D441FA73EE50029B70D /* KelimelikTests.swift */,
+				21036D461FA73EE50029B70D /* Info.plist */,
+			);
+			path = KelimelikTests;
+			sourceTree = "<group>";
+		};
+		21036D4E1FA73EE50029B70D /* KelimelikUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21036D4F1FA73EE50029B70D /* KelimelikUITests.swift */,
+				21036D511FA73EE50029B70D /* Info.plist */,
+			);
+			path = KelimelikUITests;
+			sourceTree = "<group>";
+		};
+		21036D5D1FA747C90029B70D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				21036D5E1FA747E30029B70D /* LoginManager.swift */,
+				21E671721FAB494900C6F59A /* JSONManager.swift */,
+				212921C11FA8924200070792 /* User.swift */,
+				212921C31FA8B8ED00070792 /* Constants.swift */,
+				2119B93E1FB1C7600060E2EE /* Question.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		21036D641FA77D8C0029B70D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				21036D651FA77DA90029B70D /* LoginViewController.swift */,
+				212921C51FA8BD4D00070792 /* WelcomeViewController.swift */,
+				2119B93C1FB1AAB00060E2EE /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		21E671741FAB4D1100C6F59A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				21E671751FAB4D3B00C6F59A /* DummyApiService.swift */,
+				21E671771FAB672000C6F59A /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7DD51985383184CFD675A4E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21036D631FA7744B0029B70D /* FBSDKLoginKit.framework */,
+				21036D611FA774440029B70D /* FBSDKCoreKit.framework */,
+				EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21036D281FA73EE50029B70D /* Kelimelik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21036D541FA73EE50029B70D /* Build configuration list for PBXNativeTarget "Kelimelik" */;
+			buildPhases = (
+				F199F813AD4039D292649DFD /* [CP] Check Pods Manifest.lock */,
+				21036D251FA73EE50029B70D /* Sources */,
+				21036D261FA73EE50029B70D /* Frameworks */,
+				21036D271FA73EE50029B70D /* Resources */,
+				8CB59152FB18E62C86E6CFD2 /* [CP] Embed Pods Frameworks */,
+				71633A234E9AE04EFFDF3F61 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kelimelik;
+			productName = Kelimelik;
+			productReference = 21036D291FA73EE50029B70D /* Kelimelik.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21036D3F1FA73EE50029B70D /* KelimelikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21036D571FA73EE50029B70D /* Build configuration list for PBXNativeTarget "KelimelikTests" */;
+			buildPhases = (
+				21036D3C1FA73EE50029B70D /* Sources */,
+				21036D3D1FA73EE50029B70D /* Frameworks */,
+				21036D3E1FA73EE50029B70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21036D421FA73EE50029B70D /* PBXTargetDependency */,
+			);
+			name = KelimelikTests;
+			productName = KelimelikTests;
+			productReference = 21036D401FA73EE50029B70D /* KelimelikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21036D4A1FA73EE50029B70D /* KelimelikUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21036D5A1FA73EE50029B70D /* Build configuration list for PBXNativeTarget "KelimelikUITests" */;
+			buildPhases = (
+				21036D471FA73EE50029B70D /* Sources */,
+				21036D481FA73EE50029B70D /* Frameworks */,
+				21036D491FA73EE50029B70D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21036D4D1FA73EE50029B70D /* PBXTargetDependency */,
+			);
+			name = KelimelikUITests;
+			productName = KelimelikUITests;
+			productReference = 21036D4B1FA73EE50029B70D /* KelimelikUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21036D211FA73EE50029B70D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Belma Ibrahimbas";
+				TargetAttributes = {
+					21036D281FA73EE50029B70D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					21036D3F1FA73EE50029B70D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21036D281FA73EE50029B70D;
+					};
+					21036D4A1FA73EE50029B70D = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21036D281FA73EE50029B70D;
+					};
+				};
+			};
+			buildConfigurationList = 21036D241FA73EE50029B70D /* Build configuration list for PBXProject "Kelimelik" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21036D201FA73EE50029B70D;
+			productRefGroup = 21036D2A1FA73EE50029B70D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21036D281FA73EE50029B70D /* Kelimelik */,
+				21036D3F1FA73EE50029B70D /* KelimelikTests */,
+				21036D4A1FA73EE50029B70D /* KelimelikUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21036D271FA73EE50029B70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21036D3A1FA73EE50029B70D /* LaunchScreen.storyboard in Resources */,
+				21036D371FA73EE50029B70D /* Assets.xcassets in Resources */,
+				21036D321FA73EE50029B70D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21036D3E1FA73EE50029B70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21036D491FA73EE50029B70D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71633A234E9AE04EFFDF3F61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CB59152FB18E62C86E6CFD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F199F813AD4039D292649DFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kelimelik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21036D251FA73EE50029B70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21036D2F1FA73EE50029B70D /* ViewController.swift in Sources */,
+				212921C61FA8BD4D00070792 /* WelcomeViewController.swift in Sources */,
+				21E671781FAB672000C6F59A /* Utilities.swift in Sources */,
+				21036D351FA73EE50029B70D /* Kelimelik.xcdatamodeld in Sources */,
+				2119B93D1FB1AAB00060E2EE /* GameViewController.swift in Sources */,
+				212921C21FA8924200070792 /* User.swift in Sources */,
+				21036D2D1FA73EE50029B70D /* AppDelegate.swift in Sources */,
+				21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */,
+				2119B93F1FB1C7600060E2EE /* Question.swift in Sources */,
+				212921C41FA8B8ED00070792 /* Constants.swift in Sources */,
+				21036D661FA77DA90029B70D /* LoginViewController.swift in Sources */,
+				21E671731FAB494900C6F59A /* JSONManager.swift in Sources */,
+				21036D5F1FA747E30029B70D /* LoginManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21036D3C1FA73EE50029B70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21036D451FA73EE50029B70D /* KelimelikTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21036D471FA73EE50029B70D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21036D501FA73EE50029B70D /* KelimelikUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21036D421FA73EE50029B70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21036D281FA73EE50029B70D /* Kelimelik */;
+			targetProxy = 21036D411FA73EE50029B70D /* PBXContainerItemProxy */;
+		};
+		21036D4D1FA73EE50029B70D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21036D281FA73EE50029B70D /* Kelimelik */;
+			targetProxy = 21036D4C1FA73EE50029B70D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21036D301FA73EE50029B70D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21036D311FA73EE50029B70D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21036D381FA73EE50029B70D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21036D391FA73EE50029B70D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21036D521FA73EE50029B70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21036D531FA73EE50029B70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21036D551FA73EE50029B70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2171DD33B693BFC6B22E8557 /* Pods-Kelimelik.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77PRV5J86U;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/leveldb-library/\"",
+					"\"${PODS_ROOT}/leveldb-library/include\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/leveldb-library/\"",
+					"\"${PODS_ROOT}/leveldb-library/include\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Fabric\"",
+				);
+				INFOPLIST_FILE = Kelimelik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belma.ibrahimbas.Kelimelik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21036D561FA73EE50029B70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07A5D92A9406EBFFBD06C7AB /* Pods-Kelimelik.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77PRV5J86U;
+				INFOPLIST_FILE = Kelimelik/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belma.ibrahimbas.Kelimelik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		21036D581FA73EE50029B70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77PRV5J86U;
+				INFOPLIST_FILE = KelimelikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belma.ibrahimbas.KelimelikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kelimelik.app/Kelimelik";
+			};
+			name = Debug;
+		};
+		21036D591FA73EE50029B70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77PRV5J86U;
+				INFOPLIST_FILE = KelimelikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belma.ibrahimbas.KelimelikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kelimelik.app/Kelimelik";
+			};
+			name = Release;
+		};
+		21036D5B1FA73EE50029B70D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77PRV5J86U;
+				INFOPLIST_FILE = KelimelikUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belma.ibrahimbas.KelimelikUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kelimelik;
+			};
+			name = Debug;
+		};
+		21036D5C1FA73EE50029B70D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77PRV5J86U;
+				INFOPLIST_FILE = KelimelikUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = belma.ibrahimbas.KelimelikUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kelimelik;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21036D241FA73EE50029B70D /* Build configuration list for PBXProject "Kelimelik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21036D521FA73EE50029B70D /* Debug */,
+				21036D531FA73EE50029B70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21036D541FA73EE50029B70D /* Build configuration list for PBXNativeTarget "Kelimelik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21036D551FA73EE50029B70D /* Debug */,
+				21036D561FA73EE50029B70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21036D571FA73EE50029B70D /* Build configuration list for PBXNativeTarget "KelimelikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21036D581FA73EE50029B70D /* Debug */,
+				21036D591FA73EE50029B70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21036D5A1FA73EE50029B70D /* Build configuration list for PBXNativeTarget "KelimelikUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21036D5B1FA73EE50029B70D /* Debug */,
+				21036D5C1FA73EE50029B70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21036D331FA73EE50029B70D /* Kelimelik.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21036D341FA73EE50029B70D /* Kelimelik.xcdatamodel */,
+			);
+			currentVersion = 21036D341FA73EE50029B70D /* Kelimelik.xcdatamodel */;
+			path = Kelimelik.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 21036D211FA73EE50029B70D /* Project object */;
+}
