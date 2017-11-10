@@ -48,9 +48,9 @@ class DummyApiService: NSObject {
         ] as? AnyObject as! Dictionary<String, AnyObject?>
         
         if(level == Level.Middle) {
-            questionJson = ["answer" : "Dayı",
+            questionJson = ["answer" : "İşaret",
                             "level" : 1,
-                            "question" : "Annenin erkek kardeşi"] as? AnyObject as! Dictionary<String, AnyObject?>
+                            "question" : "El, yüz hareketleriyle gösterme"] as? AnyObject as! Dictionary<String, AnyObject?>
         }
         return questionJson
     }

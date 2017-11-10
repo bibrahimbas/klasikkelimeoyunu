@@ -13,7 +13,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var countdownTimer = Timer()
     var minutes: Int = starterTimerInMinutes
     var seconds: Int = 60
-
+    
     var timerString: String = ""
     
     var countDownSeconds: Int = countDownTimerInSeconds
@@ -27,38 +27,32 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var keyboard: UIView!
     @IBOutlet var alphabetButtonArray: [UIButton]!
-    @IBOutlet weak var fourWordAnswer: UIStackView!
-    @IBOutlet var fourWordAnswerButtons: [UIButton]!
+    @IBOutlet weak var currentAnswerView: UIView!
+    var currentAnswerButtons: [UIButton] = [UIButton]()
     
     @IBOutlet weak var hintButton: UIImageView!
     
-    override func viewDidLoad() {
-        initControls()
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //checkAnswer(usersAnswerText)
-        return true
-    }
-
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         startCountdownTimer()
-        initControls()
+        initController()
     }
     
-    func initControls() {
-        self.alphabetButtonArray.forEach {
-            $0.layer.borderWidth = 1
-            $0.layer.cornerRadius = 10
-        }
-        
-        self.fourWordAnswerButtons.forEach {
+    func initAnswerButtons() {
+        currentAnswerButtons.forEach {
             $0.backgroundColor = UIColor.white
             $0.setTitle("_", for: .normal)
         }
         
         userAnswer = ""
         counter = 0
+    }
+    
+    func initController() {
+        self.alphabetButtonArray.forEach {
+            $0.layer.borderWidth = 1
+            $0.layer.cornerRadius = 10
+        }
     }
     func startCountdownTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.updateCountdownTimer), userInfo: nil, repeats: true)
@@ -71,21 +65,13 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         if(countDownSeconds == -2)
         {
-            stopCountdownTimer()
+            stopTimer(timer: countdownTimer)
             getQuestionByLevel(level: Level.Easy)
             startMainTimer()
             countdownLabel.isHidden = true
             questionLabel.isHidden = false
             keyboard.isHidden = false
-            fourWordAnswer.isHidden = false
             hintButton.isHidden = false
-            
-        }
-    }
-    
-    func stopCountdownTimer() {
-        if countdownTimer != nil {
-            countdownTimer.invalidate()
         }
     }
     
@@ -93,12 +79,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.updateMainTimer), userInfo: nil, repeats: true)
     }
     
-    func stopMainTimer() {
+    func stopTimer(timer: Timer) {
         if timer != nil {
             timer.invalidate()
         }
     }
-    
     @objc func updateMainTimer() {
         seconds -= 1
         
@@ -114,7 +99,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         if(seconds == 1 && minutes == 0)
         {
-            stopMainTimer()
+            stopTimer(timer: timer)
         }
     }
     
@@ -122,41 +107,63 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // TODO kullanıcı level'ı önceki sayfadan alınacak
         question.getQuestionByLevel(level: level)
         questionLabel.text = question.question
-        initControls()
+        currentAnswerButtons.removeAll()
+        initAnswerButtonArray(question.answer.count)
+    }
+    
+    func initAnswerButtonArray(_ answerLength: Int) {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = Int(screenSize.width)
+        let screenHeight = Int(screenSize.height)
+        
+        var xCordinate = (screenWidth - answerLength * 50) / 2
+        
+        for _ in 1...answerLength {
+            let button = UIButton(frame: CGRect(x: xCordinate, y: 8, width: 50, height: 50))
+            button.backgroundColor = UIColor.white
+            button.setTitle("_", for: .normal)
+            button.setTitleColor(UIColor.black, for: .normal)
+            button.layer.borderWidth = 1
+            button.layer.cornerRadius = 10
+            
+            self.currentAnswerView.addSubview(button)
+            currentAnswerButtons.append(button)
+            xCordinate += 52
+        }
     }
     
     @IBAction func alphabetKeyPressed(_ sender: UIButton) {
         let letter = getWhichLetterIsPressed(tag: sender.tag)
         let mainAnswer = question.answer.uppercased()
-
+        
         counter += 1
         
-        for button in fourWordAnswerButtons {
+        for button in currentAnswerButtons {
             if(button.currentTitle == "_") {
                 button.setTitle(letter, for: .normal)
                 button.backgroundColor = UIColor.lightGray
                 
-                if(counter != fourWordAnswerButtons.count) {
+                if(counter != currentAnswerButtons.count) {
                     return
                 }
             }
         }
         
         counter = 0
-
-        for button in fourWordAnswerButtons {
+        
+        for button in currentAnswerButtons {
             userAnswer += button.currentTitle!
         }
-
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
             if(self.userAnswer == mainAnswer.uppercased())
             {
-                for button in self.fourWordAnswerButtons {
+                for button in self.currentAnswerButtons {
                     button.backgroundColor = UIColor.yellow
                 }
             }
             else {
-                for button in self.fourWordAnswerButtons {
+                for button in self.currentAnswerButtons {
                     let index = mainAnswer.index(mainAnswer.startIndex, offsetBy: self.counter)
                     button.setTitle("\(mainAnswer[index])", for: .normal)
                     button.backgroundColor = UIColor.green
@@ -167,6 +174,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
             self.getQuestionByLevel(level: Level.Middle)
+            self.initAnswerButtons()
         })
     }
     
