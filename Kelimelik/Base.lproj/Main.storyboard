@@ -317,8 +317,8 @@
                                     <constraint firstAttribute="bottom" secondItem="DoP-qo-SAd" secondAttribute="bottom" constant="-3" id="z89-cp-V06"/>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="soru" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="22" minimumFontSize="18" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPq-PN-bcd">
-                                <rect key="frame" x="0.0" y="141" width="414" height="329"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="soru" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="22" minimumFontSize="18" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPq-PN-bcd">
+                                <rect key="frame" x="0.0" y="121" width="414" height="87"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                 <color key="textColor" red="0.048942603170871735" green="0.52456551790237427" blue="0.77808088064193726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -333,8 +333,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9a-Mc-7bh" userLabel="currentAnswerView">
-                                <rect key="frame" x="0.0" y="469" width="414" height="68"/>
-                                <color key="backgroundColor" red="1" green="0.93390644499606257" blue="0.95512516715073803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="420" width="414" height="117"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z01-dO-3rT" userLabel="keyboard">
                                 <rect key="frame" x="0.0" y="535" width="414" height="201"/>
@@ -835,11 +834,10 @@
                             <constraint firstItem="qOr-RB-TlW" firstAttribute="leading" secondItem="EET-1i-SqZ" secondAttribute="leading" constant="135" id="NCl-LA-9Mq"/>
                             <constraint firstItem="EET-1i-SqZ" firstAttribute="bottom" secondItem="x9a-Mc-7bh" secondAttribute="bottom" constant="199" id="UWY-4W-Ldg"/>
                             <constraint firstItem="SPq-PN-bcd" firstAttribute="leading" secondItem="Z01-dO-3rT" secondAttribute="leading" id="Y09-Ft-ff5"/>
-                            <constraint firstItem="x9a-Mc-7bh" firstAttribute="top" secondItem="qOr-RB-TlW" secondAttribute="bottom" constant="-8" id="aMl-na-uSZ"/>
+                            <constraint firstItem="x9a-Mc-7bh" firstAttribute="top" secondItem="qOr-RB-TlW" secondAttribute="bottom" constant="-57" id="aMl-na-uSZ"/>
                             <constraint firstAttribute="trailing" secondItem="SPq-PN-bcd" secondAttribute="trailing" id="bxW-CZ-Vse"/>
                             <constraint firstItem="Jh2-Pc-jNX" firstAttribute="trailing" secondItem="Z01-dO-3rT" secondAttribute="trailing" id="dpr-MM-4Rq"/>
-                            <constraint firstItem="SPq-PN-bcd" firstAttribute="top" secondItem="Jh2-Pc-jNX" secondAttribute="bottom" constant="30" id="enL-zc-x8k"/>
-                            <constraint firstItem="SPq-PN-bcd" firstAttribute="bottom" secondItem="x9a-Mc-7bh" secondAttribute="bottom" constant="-67" id="tva-i9-qir"/>
+                            <constraint firstItem="SPq-PN-bcd" firstAttribute="top" secondItem="Jh2-Pc-jNX" secondAttribute="bottom" constant="10" id="enL-zc-x8k"/>
                             <constraint firstItem="Z01-dO-3rT" firstAttribute="bottom" secondItem="EET-1i-SqZ" secondAttribute="bottom" id="uL4-ec-lSF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EET-1i-SqZ"/>

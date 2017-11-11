@@ -112,23 +112,25 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func initAnswerButtonArray(_ answerLength: Int) {
+        let buttonWidth = 60
+        let buttonHeight = 70
         let screenSize = UIScreen.main.bounds
         let screenWidth = Int(screenSize.width)
         let screenHeight = Int(screenSize.height)
         
-        var xCordinate = (screenWidth - answerLength * 50) / 2
+        var xCordinate = (screenWidth - answerLength * buttonWidth) / 2
         
         for _ in 1...answerLength {
-            let button = UIButton(frame: CGRect(x: xCordinate, y: 8, width: 50, height: 50))
+            let button = UIButton(frame: CGRect(x: xCordinate, y: 8, width: buttonWidth, height: buttonHeight))
             button.backgroundColor = UIColor.white
             button.setTitle("_", for: .normal)
-            button.setTitleColor(UIColor.black, for: .normal)
+            button.setTitleColor(Utilities.UIColorFromRGB(rgbValue: 0xC83A48), for: .normal)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 10
             
             self.currentAnswerView.addSubview(button)
             currentAnswerButtons.append(button)
-            xCordinate += 52
+            xCordinate += 62
         }
     }
     
