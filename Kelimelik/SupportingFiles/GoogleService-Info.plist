@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>420011722444-2ukp42hm46h76adn0np32g3e3m0o3jrs.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.420011722444-2ukp42hm46h76adn0np32g3e3m0o3jrs</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC7Gl8GY7XJ9vJmpAM-vJ4gQGC58xQZDQM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>420011722444</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>belma.ibrahimbas.Kelimelik</string>
+	<key>PROJECT_ID</key>
+	<string>kelimelik-ada8a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kelimelik-ada8a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:420011722444:ios:5a0cd0b342659d0a</string>
+	<key>DATABASE_URL</key>
+	<string>https://kelimelik-ada8a.firebaseio.com</string>
+</dict>
+</plist>

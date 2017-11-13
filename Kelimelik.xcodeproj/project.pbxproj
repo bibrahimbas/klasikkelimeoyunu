@@ -25,9 +25,12 @@
 		212921C41FA8B8ED00070792 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C31FA8B8ED00070792 /* Constants.swift */; };
 		212921C61FA8BD4D00070792 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C51FA8BD4D00070792 /* WelcomeViewController.swift */; };
 		2151BB801FB597C000FE6AE3 /* versionNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2151BB7F1FB597C000FE6AE3 /* versionNotes.rtf */; };
+		215291801FB910EB00AFDFB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2152917F1FB910EA00AFDFB6 /* GoogleService-Info.plist */; };
 		21E671731FAB494900C6F59A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671721FAB494900C6F59A /* JSONManager.swift */; };
 		21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671751FAB4D3B00C6F59A /* DummyApiService.swift */; };
 		21E671781FAB672000C6F59A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671771FAB672000C6F59A /* Utilities.swift */; };
+		21FEF2CD1FB8C57100639F88 /* CurrentGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEF2CC1FB8C57100639F88 /* CurrentGame.swift */; };
+		21FEF2CF1FB8EC4C00639F88 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEF2CE1FB8EC4C00639F88 /* NewUserViewController.swift */; };
 		7EC0B76E0E28340183E109D9 /* Pods_Kelimelik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,10 +77,13 @@
 		212921C31FA8B8ED00070792 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		212921C51FA8BD4D00070792 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2151BB7F1FB597C000FE6AE3 /* versionNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = versionNotes.rtf; sourceTree = "<group>"; };
+		2152917F1FB910EA00AFDFB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2171DD33B693BFC6B22E8557 /* Pods-Kelimelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelimelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik.debug.xcconfig"; sourceTree = "<group>"; };
 		21E671721FAB494900C6F59A /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		21E671751FAB4D3B00C6F59A /* DummyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyApiService.swift; sourceTree = "<group>"; };
 		21E671771FAB672000C6F59A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		21FEF2CC1FB8C57100639F88 /* CurrentGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGame.swift; sourceTree = "<group>"; };
+		21FEF2CE1FB8EC4C00639F88 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelimelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -144,6 +150,7 @@
 		21036D2B1FA73EE50029B70D /* Kelimelik */ = {
 			isa = PBXGroup;
 			children = (
+				215291811FB910F200AFDFB6 /* SupportingFiles */,
 				21E671741FAB4D1100C6F59A /* Helpers */,
 				21036D641FA77D8C0029B70D /* Controllers */,
 				21036D5D1FA747C90029B70D /* Classes */,
@@ -184,6 +191,7 @@
 				212921C11FA8924200070792 /* User.swift */,
 				212921C31FA8B8ED00070792 /* Constants.swift */,
 				2119B93E1FB1C7600060E2EE /* Question.swift */,
+				21FEF2CC1FB8C57100639F88 /* CurrentGame.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -194,6 +202,7 @@
 				21036D651FA77DA90029B70D /* LoginViewController.swift */,
 				212921C51FA8BD4D00070792 /* WelcomeViewController.swift */,
 				2119B93C1FB1AAB00060E2EE /* GameViewController.swift */,
+				21FEF2CE1FB8EC4C00639F88 /* NewUserViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +213,14 @@
 				2151BB7F1FB597C000FE6AE3 /* versionNotes.rtf */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		215291811FB910F200AFDFB6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2152917F1FB910EA00AFDFB6 /* GoogleService-Info.plist */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		21E671741FAB4D1100C6F59A /* Helpers */ = {
@@ -337,6 +354,7 @@
 			files = (
 				2151BB801FB597C000FE6AE3 /* versionNotes.rtf in Resources */,
 				21036D3A1FA73EE50029B70D /* LaunchScreen.storyboard in Resources */,
+				215291801FB910EB00AFDFB6 /* GoogleService-Info.plist in Resources */,
 				21036D371FA73EE50029B70D /* Assets.xcassets in Resources */,
 				21036D321FA73EE50029B70D /* Main.storyboard in Resources */,
 			);
@@ -365,9 +383,19 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseFacebookAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseGoogleAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebasePhoneAuthUI.bundle,
+				$PODS_CONFIGURATION_BUILD_DIR/FirebaseUI/FirebaseTwitterAuthUI.bundle,
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterShareExtensionUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,14 +410,38 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -422,11 +474,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21036D2F1FA73EE50029B70D /* ViewController.swift in Sources */,
+				21FEF2CD1FB8C57100639F88 /* CurrentGame.swift in Sources */,
 				212921C61FA8BD4D00070792 /* WelcomeViewController.swift in Sources */,
 				21E671781FAB672000C6F59A /* Utilities.swift in Sources */,
 				21036D351FA73EE50029B70D /* Kelimelik.xcdatamodeld in Sources */,
 				2119B93D1FB1AAB00060E2EE /* GameViewController.swift in Sources */,
 				212921C21FA8924200070792 /* User.swift in Sources */,
+				21FEF2CF1FB8EC4C00639F88 /* NewUserViewController.swift in Sources */,
 				21036D2D1FA73EE50029B70D /* AppDelegate.swift in Sources */,
 				21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */,
 				2119B93F1FB1C7600060E2EE /* Question.swift in Sources */,

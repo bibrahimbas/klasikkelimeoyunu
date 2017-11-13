@@ -11,6 +11,9 @@ public enum Level: Int {
     case Easy = 0, Middle, Hard, VeryHard
 }
 
+public enum Grade: Int {
+    case Kaplumbaga = 0, Sincap, Koala, Tavsan, Geyik, Kanguru, Kedi, Zurafa, Zebra, Devekusu, Antilop, Aslan, Cita, Sahin
+}
 public enum LoginMethod : String {
     case Facebook = "Facebook"
     case NewUser = "NewUser"
@@ -34,5 +37,6 @@ public let starterTimerInMinutes = 4
 public let countDownTimerInSeconds = 1
 public enum Alphabet: Int { case A = 0, B, C, Ç, D, E, F, G, Ğ, H, I, İ, J, K, L, M, N, O, Ö, P, R,
     S, Ş, T, U, Ü, V, Y, Z }
+public let hintCountForCurrentGame = 5
 
 

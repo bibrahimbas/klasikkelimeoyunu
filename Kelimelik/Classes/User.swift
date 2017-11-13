@@ -9,6 +9,8 @@
 import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
+import Firebase
+
 
 class User: NSObject {
     var userId: String = ""
@@ -18,6 +20,7 @@ class User: NSObject {
     var friends: [User] = []
     var level: Level = Level.Easy
     var loginMethod: String = LoginMethod.Guest.rawValue
+    var grade: Grade = .Kaplumbaga
     private var photoImage : UIImage = #imageLiteral(resourceName: "defaultProfileImage")
     private var _photoUrl : String = ""
     
@@ -50,6 +53,8 @@ class User: NSObject {
         self.level = level
         self.photoUrl = photoUrl
         self.loginMethod = loginMethod
+        
+        
     }
     
     init(isGuestUser: Bool) {
@@ -144,5 +149,42 @@ class User: NSObject {
         //TODO isUserLogedIn == false olması handle edilecek
         LoginManager.isUserLogedIn = true
         return LoginManager.isUserLogedIn
+    }
+    
+    func createNewUser(user: User) -> Bool {
+        if(isWebApiAvailable) {
+            //TODO User JSON objesi rest servis ile kayıt edilecek
+        }
+        else {
+            
+        }
+        return true
+    }
+    
+    func isUsernameExist(username: String) -> Bool {
+        var result = false
+        let ref = Database.database().reference().child("users")
+        let queryRef = ref.queryOrdered(byChild: "username").queryEqual(toValue: username)
+        
+        queryRef.observe(.value, with: { snapshot in
+            if let user = snapshot.value as? [String:Any] {
+                print(user)
+                let username = user["username"] as? String
+                
+                print("**********USERNAME\(username)") //check the value of wins is correct
+                result = true
+            }
+            else {
+                print("***************NO USER FOUND")
+                result = false
+            }
+        })
+        return result
+    }
+    
+    func isEmailExist(email: String) -> Bool {
+        let ref = Database.database().reference().child("users")
+        let queryRef = ref.queryOrdered(byChild: "email").queryEqual(toValue: email)
+        return true
     }
 }

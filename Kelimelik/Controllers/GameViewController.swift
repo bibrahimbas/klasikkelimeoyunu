@@ -13,24 +13,23 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var countdownTimer = Timer()
     var minutes: Int = starterTimerInMinutes
     var seconds: Int = 60
-    
     var timerString: String = ""
-    
     var countDownSeconds: Int = countDownTimerInSeconds
-    
     var question: Question = Question()
     var userAnswer: String = ""
     var counter = 0
-    
+    var currentAnswerButtons: [UIButton] = [UIButton]()
+    var currentGame: CurrentGame = CurrentGame()
+    var noMoreAlphabetPressAllowed: Bool = false
+    @IBOutlet weak var timerView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var keyboard: UIView!
     @IBOutlet var alphabetButtonArray: [UIButton]!
     @IBOutlet weak var currentAnswerView: UIView!
-    var currentAnswerButtons: [UIButton] = [UIButton]()
-    
-    @IBOutlet weak var hintButton: UIImageView!
+    @IBOutlet weak var hintButton: UIButton!
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -72,6 +71,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             questionLabel.isHidden = false
             keyboard.isHidden = false
             hintButton.isHidden = false
+            timerView.isHidden = false
         }
     }
     
@@ -84,6 +84,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             timer.invalidate()
         }
     }
+    
     @objc func updateMainTimer() {
         seconds -= 1
         
@@ -109,52 +110,51 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         questionLabel.text = question.question
         currentAnswerButtons.removeAll()
         initAnswerButtonArray(question.answer.count)
+        noMoreAlphabetPressAllowed = false
     }
     
     func initAnswerButtonArray(_ answerLength: Int) {
-        let buttonWidth = 60
-        let buttonHeight = 70
+        var buttonWidth = 60
+        var buttonHeight = 70
+        if(answerLength > 6) {
+            buttonWidth = 45
+            buttonHeight = 55
+        }
         let screenSize = UIScreen.main.bounds
         let screenWidth = Int(screenSize.width)
-        let screenHeight = Int(screenSize.height)
         
         var xCordinate = (screenWidth - answerLength * buttonWidth) / 2
         
         for _ in 1...answerLength {
-            let button = UIButton(frame: CGRect(x: xCordinate, y: 8, width: buttonWidth, height: buttonHeight))
+            let button = UIButton(frame: CGRect(x: xCordinate, y: 0, width: buttonWidth, height: buttonHeight))
             button.backgroundColor = UIColor.white
             button.setTitle("_", for: .normal)
             button.setTitleColor(Utilities.UIColorFromRGB(rgbValue: 0xC83A48), for: .normal)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 10
+            button.addTarget(self, action: #selector(clearSelectedLetter), for: .touchUpInside)
             
             self.currentAnswerView.addSubview(button)
             currentAnswerButtons.append(button)
-            xCordinate += 62
+            xCordinate += buttonWidth + 2
         }
     }
     
-    @IBAction func alphabetKeyPressed(_ sender: UIButton) {
-        let letter = getWhichLetterIsPressed(tag: sender.tag)
-        let mainAnswer = question.answer.uppercased()
-        
-        counter += 1
-        
-        for button in currentAnswerButtons {
-            if(button.currentTitle == "_") {
-                button.setTitle(letter, for: .normal)
-                button.backgroundColor = UIColor.lightGray
-                
-                if(counter != currentAnswerButtons.count) {
-                    return
-                }
-            }
+    func cleanButtons() {
+        for view in currentAnswerView.subviews{
+            view.removeFromSuperview()
         }
-        
+    }
+    
+    fileprivate func checkAnswer() {
+        noMoreAlphabetPressAllowed = true
         counter = 0
+        
+        let mainAnswer = question.answer.uppercased()
         
         for button in currentAnswerButtons {
             userAnswer += button.currentTitle!
+            button.isEnabled = false
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
@@ -175,9 +175,31 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         })
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            self.cleanButtons()
             self.getQuestionByLevel(level: Level.Middle)
             self.initAnswerButtons()
         })
+    }
+    
+    @IBAction func alphabetKeyPressed(_ sender: UIButton) {
+        if(!noMoreAlphabetPressAllowed) {
+            let letter = getWhichLetterIsPressed(tag: sender.tag)
+        
+            counter += 1
+        
+            for button in currentAnswerButtons {
+                if(button.currentTitle == "_") {
+                    button.setTitle(letter, for: .normal)
+                    button.backgroundColor = UIColor.lightGray
+                
+                    if(counter != currentAnswerButtons.count) {
+                        return
+                    }
+                }
+            }
+        
+            checkAnswer()
+        }
     }
     
     @IBAction func clearSelectedLetter(_ sender: UIButton) {
@@ -185,6 +207,42 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             sender.setTitle("_", for: .normal)
             sender.backgroundColor = UIColor.white
             counter -= 1
+        }
+    }
+    
+    @IBAction func hintButtonPressed(_ sender: Any) {
+        var hintArray: [Int] = [Int]()
+        var index = 0
+        
+        for view in currentAnswerView.subviews{
+            if let button = view as? UIButton {
+                if(button.currentTitle == "_") {
+                    hintArray.append(index)
+                }
+                index += 1
+            }
+        }
+        
+        counter += 1 // bu counter önemli !!! alphabetKeyPressed de counter != currentAnswerButtons.count satırı ile
+        // cevabın tamamının yazıldıp yazılmadığı kontorlü yapılıyor
+        
+        let randomIndex = Int(arc4random_uniform(UInt32(hintArray.count)))
+        let mainAnswer = question.answer.uppercased()
+        
+        if(hintArray.count > 0) {
+            let answerIndex = mainAnswer.index(mainAnswer.startIndex, offsetBy: hintArray[randomIndex])
+            currentAnswerButtons[hintArray[randomIndex]].setTitle("\(mainAnswer[answerIndex])", for: .normal)
+            currentAnswerButtons[hintArray[randomIndex]].backgroundColor = UIColor.lightGray
+        }
+        
+        if(currentGame.hintCount > 0) {
+        currentGame.hintCount -= 1
+        } else {
+            hintButton.isEnabled = false
+        }
+        
+        if(counter == currentAnswerButtons.count){
+            checkAnswer()
         }
     }
     
