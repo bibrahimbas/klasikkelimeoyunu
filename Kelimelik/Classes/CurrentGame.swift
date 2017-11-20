@@ -14,6 +14,7 @@ class CurrentGame {
     var correctAnswers: Int = 0
     var wrongAnswers: Int = 0
     var score: Int = 0
+    var heartTotal: Int = 0
     
     init() {
         hintCount = hintCountForCurrentGame

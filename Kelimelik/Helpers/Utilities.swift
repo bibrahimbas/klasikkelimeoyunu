@@ -41,4 +41,12 @@ class Utilities: NSObject {
             alpha: CGFloat(1.0)
         )
     }
+    
+    static func getDateWithTime() -> String {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        return dateFormatter.string(from: currentDate)
+    }
 }

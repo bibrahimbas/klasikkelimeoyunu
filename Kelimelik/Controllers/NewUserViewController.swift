@@ -19,28 +19,30 @@ class NewUserViewController : UIViewController {
     }
     
     @IBAction func newUserCreatePressed(_ sender: Any) {
-        if(user.isUsernameExist(username: usernameTextbox.text!)) {
-            resultLabel.text = "Bu kullanıcı mevcut. Başka bir kullanıcı ismi seçiniz"
-            return
-        }
-        
-        if(user.isEmailExist(email: emailTextbox.text!)) {
-            resultLabel.text = "Bu email adresi mevcut. Başka bi email adresi ile deneyiniz"
-            return
-        }
-        
-        user = User(username: usernameTextbox.text!, email: emailTextbox.text!, level: Level.Easy, photoUrl: "", loginMethod: LoginMethod.NewUser.rawValue )
-        
-        if(user.createNewUser(user: user)) {
-            directToWelcomePage()
+        user.email = emailTextbox.text
+        user.username = usernameTextbox.text!
+        resultLabel.text = ""
+
+        user.insertUserToDB(user: user) { (result) in
+            if((result as? UserInsertResult) != nil) {
+                if(result == UserInsertResult.UsernameAlreadyExists) {
+                    self.resultLabel.text = "Kullanıcı İsmi Mevcut"
+                }
+                if(result == UserInsertResult.EmailAlreadyExists) {
+                    self.resultLabel.text = "Email mevcut"
+                }
+                if(result == UserInsertResult.SuccessfullyInserted) {
+                    self.directToWelcomePage()
+                }
+            }
         }
     }
     
     func directToWelcomePage() {
         performSegue(withIdentifier: "directWelcomeFromNewLoginSegue", sender: user)
-        
+
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "directWelcomeFromNewLoginSegue" {
             let welcomeVC = segue.destination as! WelcomeViewController

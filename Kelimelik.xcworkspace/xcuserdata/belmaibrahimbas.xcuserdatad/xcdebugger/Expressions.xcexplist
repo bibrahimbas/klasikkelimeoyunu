@@ -69,6 +69,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in User.getUserFromDB(childName:childValue:completed:):User.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userDetails">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "LoginViewController.directToWelcomePage():LoginViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -85,6 +93,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in User.insertUserToDB(user:):User.swift">
+      </ContextState>
+      <ContextState
          contextName = "User.getUserDefaults():User.swift">
       </ContextState>
       <ContextState
@@ -92,6 +103,14 @@
          <PersistentStrings>
             <PersistentString
                value = "error">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static Utilities.getDateWithTime():Utilities.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dateFormatter.string(from: currentDate)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

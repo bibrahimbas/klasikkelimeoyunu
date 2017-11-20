@@ -167,9 +167,7 @@
                                             <color key="titleColor" red="0.94380074739999997" green="0.99297267199999995" blue="0.95991009469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnEmailLoginClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWJ-XM-quC"/>
                                             <action selector="newUserCreatePressed:" destination="1Kg-5D-4Ea" eventType="touchUpInside" id="amv-Ow-Ggg"/>
-                                            <segue destination="a7o-1r-NNF" kind="show" identifier="directWelcomeFromNewLoginSegue" id="SBU-1k-DoN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -199,6 +197,7 @@
                         <outlet property="emailTextbox" destination="heH-vV-uDM" id="SZg-na-hJE"/>
                         <outlet property="resultLabel" destination="3PC-NO-PCe" id="LEm-To-u1e"/>
                         <outlet property="usernameTextbox" destination="bLz-OY-aoX" id="3oq-9I-htl"/>
+                        <segue destination="a7o-1r-NNF" kind="show" identifier="directWelcomeFromNewLoginSegue" id="gdj-3h-x0a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K06-Js-EIP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -888,7 +887,7 @@
                                             <constraint firstAttribute="height" constant="52" id="iML-Qq-MZc"/>
                                             <constraint firstAttribute="width" constant="45" id="xl2-uK-y7H"/>
                                         </constraints>
-                                        <state key="normal" title="Button" image="hint_logo"/>
+                                        <state key="normal" image="hint_logo"/>
                                         <connections>
                                             <action selector="hintButtonPressed:" destination="6Rs-Zz-MBn" eventType="touchUpInside" id="w5v-Ns-Ga6"/>
                                         </connections>
@@ -1013,6 +1012,6 @@
         <image name="rewards" width="53" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SBU-1k-DoN"/>
+        <segue reference="gdj-3h-x0a"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -53,15 +53,11 @@ class User: NSObject {
         self.level = level
         self.photoUrl = photoUrl
         self.loginMethod = loginMethod
-        
-        
     }
     
     init(isGuestUser: Bool) {
         super.init()
-        
         self.username = GuestUserNamePrefix + Utilities.randomString(length: 5)
-
     }
     
     func setUserDefaults(user: User) {
@@ -161,30 +157,107 @@ class User: NSObject {
         return true
     }
     
-    func isUsernameExist(username: String) -> Bool {
-        var result = false
+    func getUserFromDB(childName: String, childValue: String, completed: @escaping (Bool, [String:Any], Error?) -> Void) {
+        var userData = [String:Any]()
         let ref = Database.database().reference().child("users")
-        let queryRef = ref.queryOrdered(byChild: "username").queryEqual(toValue: username)
+        let queryRef = ref.queryOrdered(byChild: childName).queryEqual(toValue: childValue)
         
         queryRef.observe(.value, with: { snapshot in
             if let user = snapshot.value as? [String:Any] {
-                print(user)
-                let username = user["username"] as? String
-                
-                print("**********USERNAME\(username)") //check the value of wins is correct
-                result = true
+                for (_, value) in user {
+                    if let userDetails = value as? [String:Any] {
+                        userData = (userDetails)
+                    }
+                }
             }
-            else {
-                print("***************NO USER FOUND")
-                result = false
-            }
+            completed(true, userData, nil)
         })
-        return result
     }
     
-    func isEmailExist(email: String) -> Bool {
+    fileprivate func checkIfUsernameExists(_ user: User, _ completed: @escaping (UserInsertResult) -> Void) {
+        getUserFromDB(childName: "username", childValue: user.username) { (success, response, error) in
+            var insertResult = UserInsertResult.Unidentified
+            if(success) {
+                if let dbResponse = response as? [String:Any] {
+                    if(dbResponse.count > 0) {
+                        insertResult = UserInsertResult.UsernameAlreadyExists
+                    }
+                }
+            }
+            
+            completed(insertResult)
+        }
+    }
+    
+    fileprivate func checkIfEmailExist(_ user: User, _ completed: @escaping (UserInsertResult) -> Void) {
+        getUserFromDB(childName: "email", childValue: user.email!) { (success, response, error) in
+            var insertResult = UserInsertResult.Unidentified
+            if(success) {
+                if let dbResponse = response as? [String:Any] {
+                    if(dbResponse.count > 0) {
+                        insertResult = UserInsertResult.EmailAlreadyExists
+                    }
+                }
+            }
+            
+            completed(insertResult)
+        }
+    }
+    
+    fileprivate func insertUser(_ user: User, _ completed: @escaping (UserInsertResult) -> Void) {
+        var insertResult = UserInsertResult.Unidentified
+        
         let ref = Database.database().reference().child("users")
-        let queryRef = ref.queryOrdered(byChild: "email").queryEqual(toValue: email)
-        return true
+        do {
+            ref.childByAutoId().setValue(user.toAnyObject(), withCompletionBlock: { (error, ref) in
+               insertResult = UserInsertResult.SuccessfullyInserted
+                completed(insertResult)
+            })
+        } catch {
+            //TODO handle error
+        }
+    }
+    
+    func insertUserToDB(user:User, completed: @escaping (UserInsertResult) -> Void)  {
+        //TODO username ve email check ederken case sensitive konusuna bak..
+        var insertResult: UserInsertResult = .Unidentified
+        checkIfUsernameExists(user) { (insertResult) in
+            if(insertResult == UserInsertResult.UsernameAlreadyExists) {
+                completed(insertResult)
+            } else {
+                self.checkIfEmailExist(user) { (insertResult) in
+                    if(insertResult == UserInsertResult.EmailAlreadyExists) {
+                        completed(insertResult)
+                    } else {
+                        self.insertUser(user) { (insertResult) in
+                            completed(insertResult)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func toAnyObject() -> Dictionary<String, AnyObject?> {
+        
+        let userJson: Dictionary<String, AnyObject?> = [
+            "email" : self.email,
+            "friends" : [],
+            "grade" : Grade.Kaplumbaga.rawValue,
+            "heartTotal" : HeartTotal,
+            "insertDate" : Utilities.getDateWithTime(),
+            "level" : Level.Easy.rawValue,
+            "loginMethod" : LoginMethod.NewUser.rawValue,
+            "photo" : self.photoUrl,
+            "rankAllTimes" : 0,
+            "rankThisWeek" : 0,
+            "rankToday" : 0,
+            "scoreTotal" : 0,
+            "userId" : 0,
+            "username" : self.username
+            ] as? AnyObject as! Dictionary<String, AnyObject?>
+        
+        return userJson
+        
     }
 }
