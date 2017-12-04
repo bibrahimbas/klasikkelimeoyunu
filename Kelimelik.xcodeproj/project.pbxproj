@@ -34,6 +34,7 @@
 		2192B5C81FC432810096EFEC /* DataServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5C71FC432810096EFEC /* DataServiceAPI.swift */; };
 		2192B5CB1FC44FA80096EFEC /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5CA1FC44FA80096EFEC /* UserView.swift */; };
 		21A78AD81FCD6036007DEA10 /* HTTPClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A78AD71FCD6036007DEA10 /* HTTPClientAPI.swift */; };
+		21C876FF1FD58CA200F347D8 /* TumAkislar.xml in Resources */ = {isa = PBXBuildFile; fileRef = 21C876FE1FD58CA200F347D8 /* TumAkislar.xml */; };
 		21E671731FAB494900C6F59A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671721FAB494900C6F59A /* JSONManager.swift */; };
 		21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671751FAB4D3B00C6F59A /* DummyApiService.swift */; };
 		21E671781FAB672000C6F59A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671771FAB672000C6F59A /* Utilities.swift */; };
@@ -95,6 +96,7 @@
 		2192B5C71FC432810096EFEC /* DataServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceAPI.swift; sourceTree = "<group>"; };
 		2192B5CA1FC44FA80096EFEC /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		21A78AD71FCD6036007DEA10 /* HTTPClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientAPI.swift; sourceTree = "<group>"; };
+		21C876FE1FD58CA200F347D8 /* TumAkislar.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TumAkislar.xml; sourceTree = "<group>"; };
 		21E671721FAB494900C6F59A /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		21E671751FAB4D3B00C6F59A /* DummyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyApiService.swift; sourceTree = "<group>"; };
 		21E671771FAB672000C6F59A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		2151BB7C1FB594D700FE6AE3 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				21C876FE1FD58CA200F347D8 /* TumAkislar.xml */,
 				2151BB7F1FB597C000FE6AE3 /* versionNotes.rtf */,
 			);
 			path = Notes;
@@ -402,6 +405,7 @@
 			files = (
 				2151BB801FB597C000FE6AE3 /* versionNotes.rtf in Resources */,
 				21036D3A1FA73EE50029B70D /* LaunchScreen.storyboard in Resources */,
+				21C876FF1FD58CA200F347D8 /* TumAkislar.xml in Resources */,
 				215291801FB910EB00AFDFB6 /* GoogleService-Info.plist in Resources */,
 				21036D371FA73EE50029B70D /* Assets.xcassets in Resources */,
 				21036D321FA73EE50029B70D /* Main.storyboard in Resources */,

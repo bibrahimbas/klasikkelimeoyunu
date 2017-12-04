@@ -19,20 +19,6 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        var param1 = WCLShineParams()
-//        param1.bigShineColor = UIColor(rgb: (153,152,38))
-//        param1.smallShineColor = UIColor(rgb: (102,102,102))
-//        param1.enableFlashing = true
-//        param1.animDuration = 3
-//        let bt1 = WCLShineButton(frame: .init(x: 100, y: 100, width: 60, height: 60), params: param1)
-//        bt1.fillColor = UIColor(rgb: (153,152,38))
-//        bt1.color = UIColor(rgb: (170,170,170))
-//        bt1.image = WCLShineImage.star
-//        bt1.setClicked(!bt1.isSelected, animated: true)
-//
-//        //bt1.addTarget(self, action: #selector(action), for: .valueChanged)
-//        self.view.addSubview(bt1)
-        
         setPhotoDefaults()
         DataService.sharedInstance.setUserDefaults()
         UserView.setCircularLogoImage(image: profileImage)

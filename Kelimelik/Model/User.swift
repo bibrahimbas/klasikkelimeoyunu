@@ -48,15 +48,6 @@ final class User {
     
     static let sharedUser = User()
     private init() {}
-    
-//    init(username: String, email: String, level: Level = Level.Easy, photoUrl: String, loginMethod: String) {
-//
-//        self.username = username
-//        self.email = email
-//        self.level = level
-//        self.photoUrl = photoUrl
-//        self.loginMethod = loginMethod
-//    }
 
     func getEmailUserProfile(childValue: String) -> GetUserFromDBResult {
         var result = GetUserFromDBResult.Unidentified

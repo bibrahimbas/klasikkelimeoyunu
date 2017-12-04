@@ -30,6 +30,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     var currentQuestion = Question()
     var countdownTimer = Timer()
     var countDownSeconds: Int = countDownTimerInSeconds
+    @IBOutlet weak var animatedButtonView: UIView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -55,6 +56,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func startCountdownTimer() {
+        Game.sharedGame.start {
+            
+        }
+        
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.updateCountdownTimer), userInfo: nil, repeats: true)
     }
     
@@ -62,11 +67,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         countdownLabel.text = "\(countDownSeconds)"
         countDownSeconds -= 1
         
-        if(countDownSeconds == -1)
+        if(countDownSeconds == -2)
         {
             stopTimer(timer: countdownTimer)
             
-            Game.sharedGame.start() {
                 self.startMainTimer()
                 self.countdownLabel.isHidden = true
                 self.questionLabel.isHidden = false
@@ -74,7 +78,6 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                 self.hintButton.isHidden = false
                 self.timerView.isHidden = false
                 self.displayNextQuestion()
-            }
         }
     }
     
@@ -161,6 +164,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         counter = 0
         
         let mainAnswer = currentQuestion.answer.uppercased()
+        var isCorrect = false
         
         for button in currentAnswerButtons {
             userAnswer += button.currentTitle!
@@ -168,11 +172,19 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+            
             if(self.userAnswer == mainAnswer.uppercased())
             {
+                isCorrect = true
+                
                 for button in self.currentAnswerButtons {
                     button.backgroundColor = UIColor.yellow
                 }
+                
+                self.showAnimatedButton(answerIsCorrect: true)
+                self.questionLabel.isHidden = true
+                self.currentAnswerView.isHidden = true
+                
             }
             else {
                 for button in self.currentAnswerButtons {
@@ -181,16 +193,22 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                     button.backgroundColor = UIColor.green
                     self.counter += 1
                 }
+                //self.showAnimatedButton(answerIsCorrect: false)
             }
         })
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            if(isCorrect) {
+                self.questionLabel.isHidden = false
+                self.currentAnswerView.isHidden = false
+                self.animatedButtonView.isHidden = true
+            }
+            
             self.cleanButtons()
             self.displayNextQuestion()
             self.initAnswerButtons()
         })
     }
-    
     
     @IBAction func alphabetKeyPressed(_ sender: UIButton) {
         if(!noMoreAlphabetPressAllowed) {
@@ -208,7 +226,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
                     }
                 }
             }
-        
+            
             checkAnswer()
         }
     }
@@ -257,6 +275,42 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func showAnimatedButton(answerIsCorrect: Bool) {
+        
+        animatedButtonView.isHidden = false
+        
+        let viewWidth = self.animatedButtonView.bounds.size.width
+        let viewHeight = self.animatedButtonView.bounds.size.height
+        
+        var paramSuccess = WCLShineParams()
+        paramSuccess.enableFlashing = true
+        paramSuccess.animDuration = 2
+       
+        var paramFailure = WCLShineParams()
+        paramFailure.shineCount = 5
+        paramFailure.animDuration = 1
+        
+        let btn = WCLShineButton(frame: .init(x: (viewWidth - 80) / 2, y: viewHeight / 4, width: 80, height: 80), params: paramSuccess)
+        
+        btn.setClicked(!btn.isSelected, animated: true)
+       
+        
+        if(answerIsCorrect) {
+            btn.image = WCLShineImage.star
+            btn.params = paramSuccess
+        } else {
+            btn.image = WCLShineImage.defaultAndSelect(#imageLiteral(resourceName: "wrong_icon"), #imageLiteral(resourceName: "wrong_icon"))
+            btn.params = paramFailure
+        }
+        
+        self.animatedButtonView.subviews.forEach { $0.removeFromSuperview() }
+        
+        self.animatedButtonView.addSubview(btn)
+    }
+    
+    func showScoreCard(answerIsCorrect: Bool) {
+        
+    }
     
     func getWhichLetterIsPressed(tag: Int) -> String {
         var letter = ""

@@ -32,31 +32,4 @@ class Question {
             }
         }
     }
-//        } else {
-//            if let questionObject = DummyApiService.getQuestionByLevel(level: level) as? Dictionary<String, AnyObject> {
-//
-//                if let question = questionObject["question"] as? String {
-//                    self.question = question
-//                }
-//
-//                if let answer = questionObject["answer"] as? String {
-//                    self.answer = answer
-//                }
-//
-//                if let level = questionObject["level"] as? Int {
-//                    switch level {
-//                    case 1:
-//                        self.level = .Easy
-//                    case 2:
-//                        self.level = .Middle
-//                    case 3:
-//                        self.level = .Hard
-//                    case 4:
-//                        self.level = .VeryHard
-//                    default:
-//                        self.level = .Easy
-//                    }
-//                }
-//            }
-//        }
 }

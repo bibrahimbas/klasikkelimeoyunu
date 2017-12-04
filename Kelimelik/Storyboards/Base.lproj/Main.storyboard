@@ -412,6 +412,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRl-h3-nTm" userLabel="AnimatedButtonView">
+                                <rect key="frame" x="0.0" y="133" width="414" height="403"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="soru" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="22" minimumFontSize="18" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SPq-PN-bcd">
                                 <rect key="frame" x="0.0" y="133" width="414" height="260"/>
                                 <constraints>
@@ -944,7 +948,7 @@
                                     <constraint firstAttribute="height" constant="70" id="ob4-IG-2lH"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-RB-TlW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOr-RB-TlW">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="250"/>
                                 <color key="textColor" red="0.78431372549019607" green="0.22745098039215686" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -953,7 +957,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eRl-h3-nTm" firstAttribute="trailing" secondItem="EET-1i-SqZ" secondAttribute="trailing" id="3md-hg-pzT"/>
                             <constraint firstAttribute="trailing" secondItem="qOr-RB-TlW" secondAttribute="trailing" id="5K5-Hi-cUp"/>
+                            <constraint firstItem="eRl-h3-nTm" firstAttribute="leading" secondItem="pQM-wt-1Ee" secondAttribute="leading" id="Elv-kq-u8x"/>
                             <constraint firstItem="x9a-Mc-7bh" firstAttribute="trailing" secondItem="EET-1i-SqZ" secondAttribute="trailing" id="Gnq-iR-gHY"/>
                             <constraint firstItem="qOr-RB-TlW" firstAttribute="bottom" secondItem="EET-1i-SqZ" secondAttribute="bottom" id="HGb-2u-kyu"/>
                             <constraint firstItem="qOr-RB-TlW" firstAttribute="top" secondItem="EET-1i-SqZ" secondAttribute="top" id="Kx2-2H-IDN"/>
@@ -969,10 +975,13 @@
                             <constraint firstItem="Jh2-Pc-jNX" firstAttribute="trailing" secondItem="EET-1i-SqZ" secondAttribute="trailing" id="qRR-5I-yEb"/>
                             <constraint firstAttribute="trailing" secondItem="Z01-dO-3rT" secondAttribute="trailing" id="t1f-EG-Kku"/>
                             <constraint firstItem="Z01-dO-3rT" firstAttribute="leading" secondItem="EET-1i-SqZ" secondAttribute="leading" id="uDD-lr-UdD"/>
+                            <constraint firstItem="eRl-h3-nTm" firstAttribute="top" secondItem="Jh2-Pc-jNX" secondAttribute="bottom" id="vbi-9v-Kb8"/>
+                            <constraint firstItem="Z01-dO-3rT" firstAttribute="top" secondItem="eRl-h3-nTm" secondAttribute="bottom" id="w1N-8L-V80"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EET-1i-SqZ"/>
                     </view>
                     <connections>
+                        <outlet property="animatedButtonView" destination="eRl-h3-nTm" id="Tk7-gg-rQa"/>
                         <outlet property="countdownLabel" destination="qOr-RB-TlW" id="6Rl-H1-1xD"/>
                         <outlet property="currentAnswerView" destination="x9a-Mc-7bh" id="HkA-cw-j52"/>
                         <outlet property="hintButton" destination="TPd-4s-TG0" id="GW6-4O-A0d"/>
@@ -1017,7 +1026,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkt-wV-U5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-354" y="334"/>
+            <point key="canvasLocation" x="-355.07246376811599" y="333.42391304347831"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="lmO-ym-Bxn">

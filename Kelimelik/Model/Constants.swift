@@ -35,7 +35,7 @@ typealias DBOperationCompleted = () -> ()
 public var isWebApiAvailable = true
 public let GuestUserNamePrefix = "Misafir_"
 public let starterTimerInMinutes = 4
-public let countDownTimerInSeconds = 1
+public let countDownTimerInSeconds = 2
 public enum Alphabet: Int { case A = 0, B, C, Ç, D, E, F, G, Ğ, H, I, İ, J, K, L, M, N, O, Ö, P, R,
     S, Ş, T, U, Ü, V, Y, Z }
 public let hintCountForCurrentGame = 5
