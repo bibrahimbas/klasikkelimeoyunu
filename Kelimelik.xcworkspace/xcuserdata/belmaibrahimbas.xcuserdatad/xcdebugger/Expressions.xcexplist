@@ -3,76 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "User.setUserDefaults(user:):User.swift">
-      </ContextState>
-      <ContextState
-         contextName = "GameViewController.updateTimer():GameViewController.swift">
+         contextName = "GameViewController.alphabetKeyPressed(_:):GameViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "timerString">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[FBSDKGraphRequestMetadata invokeCompletionHandlerForConnection:withResults:error:]:FBSDKGraphRequestMetadata.m">
-      </ContextState>
-      <ContextState
-         contextName = "LoginViewController.getUserProfile():LoginViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "email">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "User.photoUrl.setter:User.swift">
-      </ContextState>
-      <ContextState
-         contextName = "GameViewController.updateCountdownTimer():GameViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "countDownSeconds">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "globalinit_33_3DE3CA9DAC9436274EAA06D9E3134A84_func0:Constants.swift">
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in LoginViewController.btnFacebookLoginClicked(_:):LoginViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "FBSDKAccessToken.current()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "User.photo.getter:User.swift">
-      </ContextState>
-      <ContextState
-         contextName = "GameViewController.hintButtonPressed(_:):GameViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "currentGame.hintCount">
+               value = "userAnswer">
             </PersistentString>
             <PersistentString
-               value = "hintArray[randomIndex]">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in LoginViewController.getUserProfile():LoginViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "email">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in User.getUserFromDB(childName:childValue:completed:):User.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "userDetails">
+               value = "counter">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -85,42 +22,32 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "WelcomeViewController.viewDidLoad():WelcomeViewController.swift">
+         contextName = "ProfileViewController.changePhotoImagePressed(_:):ProfileViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "user.photo">
+               value = "UIImagePickerController">
+            </PersistentString>
+            <PersistentString
+               value = "view.tag">
+            </PersistentString>
+            <PersistentString
+               value = "UIImagePickerController.isSourceTypeAvailable">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in User.insertUserToDB(user:):User.swift">
-      </ContextState>
-      <ContextState
-         contextName = "User.getUserDefaults():User.swift">
-      </ContextState>
-      <ContextState
-         contextName = "LoginViewController.btnFacebookLoginClicked(_:):LoginViewController.swift">
+         contextName = "closure #1 in LoginViewController.btnFacebookLoginClicked(_:):LoginViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "error">
+               value = "FBSDKAccessToken.current()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "static Utilities.getDateWithTime():Utilities.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "dateFormatter.string(from: currentDate)">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "-[FBSDKGraphRequestMetadata invokeCompletionHandlerForConnection:withResults:error:]:FBSDKGraphRequestMetadata.m">
       </ContextState>
       <ContextState
-         contextName = "LoginViewController.viewDidLoad():LoginViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "LoginMethod.Guest.rawValue">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "globalinit_33_3DE3CA9DAC9436274EAA06D9E3134A84_func0:Constants.swift">
       </ContextState>
       <ContextState
          contextName = "GameViewController.checkAnswer(_:):GameViewController.swift">
@@ -134,24 +61,43 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "GameViewController.alphabetKeyPressed(_:):GameViewController.swift">
+         contextName = "User.setUserDefaults(user:):User.swift">
+      </ContextState>
+      <ContextState
+         contextName = "static LoginManager.getUserDefaults():LoginManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "WelcomeViewController.viewDidLoad():WelcomeViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "userAnswer">
+               value = "user.photo">
             </PersistentString>
             <PersistentString
-               value = "counter">
+               value = "user">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__57-[FBSDKLoginManager validateReauthentication:withResult:]_block_invoke:FBSDKLoginManager.m">
+         contextName = "static Utilities.getDateWithTime():Utilities.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dateFormatter.string(from: currentDate)">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "LoginViewController.prepare(for:sender:):LoginViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         contextName = "GameViewController.getNextQuestion():GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Game.sharedGame.questionSet">
+            </PersistentString>
+            <PersistentString
+               value = "currentQuestionIndex">
+            </PersistentString>
+            <PersistentString
+               value = "currentQuestion">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "GameViewController.initControls():GameViewController.swift">
@@ -165,10 +111,182 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "closure #1 in User.checkIfEmailExist(_:_:):User.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.email">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "User.photoUrl.setter:User.swift">
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.prepare(for:sender:):LoginViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static Question.getQuestionSet(completed:):Question.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item[&quot;word&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.viewDidLoad():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "LoginMethod.Guest.rawValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.getUserProfile():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "email">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginService.UserLogin(loginMethod:completed:):LoginServiceAPI.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "result">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in HTTPClientManager.getJson(type:completed:):HTTPClientManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
+            </PersistentString>
+            <PersistentString
+               value = "swiftyJsonVar.arrayObject">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__57-[FBSDKLoginManager validateReauthentication:withResult:]_block_invoke:FBSDKLoginManager.m">
+      </ContextState>
+      <ContextState
+         contextName = "User.photo.getter:User.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in User.getUserFromDB(childName:childValue:completed:):User.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userDetails">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in User.insertUserToDB(user:):User.swift">
+      </ContextState>
+      <ContextState
          contextName = "-[FBSDKLoginManager invokeHandler:error:]:FBSDKLoginManager.m">
       </ContextState>
       <ContextState
-         contextName = "static LoginManager.getUserDefaults():LoginManager.swift">
+         contextName = "GameViewController.hintButtonPressed(_:):GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "currentGame.hintCount">
+            </PersistentString>
+            <PersistentString
+               value = "hintArray[randomIndex]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in PersistencyManager.getUserFromDB(childName:childValue:completed:):PersistencyManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "childName">
+            </PersistentString>
+            <PersistentString
+               value = "childValue">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in LoginViewController.getUserProfile():LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "email">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "specialized closure #1 in static Question.getQuestionSet(completed:):Question.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "item[&quot;word&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.displayNextQuestion():GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.questionLabel.text">
+            </PersistentString>
+            <PersistentString
+               value = "currentQuestionIndex">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.updateTimer():GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "timerString">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LoginViewController.btnFacebookLoginClicked(_:):LoginViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.updateCountdownTimer():GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "countDownSeconds">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in User.getEmailUserProfile(childValue:):User.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.email">
+            </PersistentString>
+            <PersistentString
+               value = "self.username">
+            </PersistentString>
+            <PersistentString
+               value = "(dbResponse[&quot;scoreTotal&quot;] as? String)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "User.getUserDefaults():User.swift">
+      </ContextState>
+      <ContextState
+         contextName = "GameViewController.getQuestionByLevel(level:):GameViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "question.answer.count">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -25,14 +25,6 @@ class Utilities: NSObject {
         return randomString
     }
     
-    static func setCircularLogoImage(image: UIImageView) {
-        image.layer.borderWidth = 3
-        image.layer.masksToBounds = true
-        image.layer.borderColor = UIColor.white.cgColor
-        image.layer.cornerRadius = image.frame.size.width / 2
-        image.clipsToBounds = true
-    }
-    
     static func UIColorFromRGB(rgbValue: UInt) -> UIColor {
         return UIColor(
             red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,

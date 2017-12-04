@@ -54,17 +54,21 @@
 	<string>2225567181004104</string>
 	<key>FacebookDisplayName</key>
 	<string>Klasik Kelime Oyunu</string>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>fbapi</string>
-        <string>fb-messenger-api</string>
-        <string>fbauth2</string>
-        <string>fbshareextension</string>
-    </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Kamera Kullanımı Onayı</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Kelimelik Fotoğraf Albümünüze Erişmek İstiyor</string>
 </dict>
 </plist>

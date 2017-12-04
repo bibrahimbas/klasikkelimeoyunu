@@ -16,7 +16,7 @@ public enum Grade: Int {
 }
 public enum LoginMethod : String {
     case Facebook = "Facebook"
-    case NewUser = "NewUser"
+    case Email = "Email"
     case Guest = "Guest"
 }
 
@@ -32,7 +32,7 @@ typealias FBLoginCompleted = () -> ()
 typealias FBGetProfileCompleted = () -> ()
 typealias DBOperationCompleted = () -> ()
 
-public var isWebApiAvailable = false
+public var isWebApiAvailable = true
 public let GuestUserNamePrefix = "Misafir_"
 public let starterTimerInMinutes = 4
 public let countDownTimerInSeconds = 1
@@ -45,6 +45,26 @@ public enum UserInsertResult : String {
     case UsernameAlreadyExists
     case EmailAlreadyExists
     case Unidentified
+}
+
+public enum UserUpdateResult : String {
+    case SuccessfullyUpdated
+    case UsernameAlreadyExists
+    case EmailAlreadyExists
+    case Unidentified
+}
+public enum GetUserFromDBResult : String {
+    case NoUserFound
+    case UserFound
+    case Unidentified
+}
+
+public let ApiBaseAddress = "https://word-game-api.herokuapp.com/"
+
+public enum LoginResult : String {
+    case LoginOk
+    case NoUserFound
+    
 }
 public let HeartTotal = 5
 

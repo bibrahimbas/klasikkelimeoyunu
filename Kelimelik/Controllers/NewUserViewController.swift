@@ -12,18 +12,17 @@ class NewUserViewController : UIViewController {
     @IBOutlet weak var usernameTextbox: UITextField!
     @IBOutlet weak var emailTextbox: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    var user = User()
     
     override func viewDidLoad() {
         
     }
     
     @IBAction func newUserCreatePressed(_ sender: Any) {
-        user.email = emailTextbox.text
-        user.username = usernameTextbox.text!
+        User.sharedUser.email = emailTextbox.text
+        User.sharedUser.username = usernameTextbox.text!
         resultLabel.text = ""
 
-        user.insertUserToDB(user: user) { (result) in
+        DataService.sharedInstance.createUser() { (result) in
             if((result as? UserInsertResult) != nil) {
                 if(result == UserInsertResult.UsernameAlreadyExists) {
                     self.resultLabel.text = "Kullanıcı İsmi Mevcut"
@@ -32,21 +31,21 @@ class NewUserViewController : UIViewController {
                     self.resultLabel.text = "Email mevcut"
                 }
                 if(result == UserInsertResult.SuccessfullyInserted) {
-                    self.directToWelcomePage()
+                    LoginService.sharedInstance.UserLogin(loginMethod: .Email, completed: { (result) in
+                        if(result == LoginResult.LoginOk) {
+                            self.directToWelcomePage()
+                        }
+                        else {
+                            //TODO Başarısız login hata !!!
+                        }
+                    })
                 }
             }
         }
     }
     
     func directToWelcomePage() {
-        performSegue(withIdentifier: "directWelcomeFromNewLoginSegue", sender: user)
+        performSegue(withIdentifier: "directWelcomeFromNewLoginSegue", sender: User.sharedUser)
 
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "directWelcomeFromNewLoginSegue" {
-            let welcomeVC = segue.destination as! WelcomeViewController
-            welcomeVC.user = user
-        }
     }
 }

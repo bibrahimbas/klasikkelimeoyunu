@@ -12,10 +12,9 @@ import FBSDKCoreKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    var user: User! = User()
-    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var signInwithEmailButton: UIButton!
+    @IBOutlet weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +24,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         var isLoggedIn = false
         
-        (isLoggedIn,user!) = LoginManager.checkIfUserLoggedIn()
-        
+        (isLoggedIn) = LoginService.sharedInstance.checkIfUserLoggedIn()
             if(isLoggedIn) {
             directToWelcomePage()
         }
@@ -43,35 +41,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func btnFacebookLoginClicked(_ sender: Any) {
-        LoginManager.LoginWithFB {
-            self.user.getFBUserProfile {
-                self.directToWelcomePage()
-            }
-        }
-    }
-    
-    func directToWelcomePage() {
-        performSegue(withIdentifier: "directWelcomeSegue", sender: user)
-        
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "directWelcomeSegue" {
-            let welcomeVC = segue.destination as! WelcomeViewController
-            welcomeVC.user = user
-        }
-    }
-    
-    @IBAction func btnEmailLoginClicked(_ sender: Any) {
-        //TODO boş girilmesi handle edilecek
-        if(user.getEmailUserProfile(email: emailField.text!)) {
+        LoginService.sharedInstance.UserLogin(loginMethod: .Facebook) { (result) in
             self.directToWelcomePage()
         }
     }
     
     @IBAction func btnGuestLoginClicked(_ sender: Any) {
-        user = User(isGuestUser: true)
-        self.directToWelcomePage()
+        LoginService.sharedInstance.UserLogin(loginMethod: .Guest) { (result) in
+            if(result == LoginResult.LoginOk) {
+                self.directToWelcomePage()
+            }
+        }
+        
+    }
+    
+    func directToWelcomePage() {
+        performSegue(withIdentifier: "directWelcomeSegue", sender: User.sharedUser)
+    }
+    
+    @IBAction func btnEmailLoginClicked(_ sender: Any) {
+        User.sharedUser.username = emailField.text!
+        LoginService.sharedInstance.UserLogin(loginMethod: .Email) { (result) in
+            if(result == LoginResult.LoginOk)
+            {
+                self.directToWelcomePage()
+            } else if(result == LoginResult.NoUserFound) {
+                self.resultLabel.text = "Kullanıcı bulunamadı"
+            }
+        }
     }
 }
     

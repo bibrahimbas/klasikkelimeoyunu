@@ -7,19 +7,16 @@
 //
 
 import UIKit
+import WCLShineButton
 
 class GameViewController: UIViewController, UITextFieldDelegate {
     var timer = Timer()
-    var countdownTimer = Timer()
     var minutes: Int = starterTimerInMinutes
     var seconds: Int = 60
     var timerString: String = ""
-    var countDownSeconds: Int = countDownTimerInSeconds
-    var question: Question = Question()
     var userAnswer: String = ""
     var counter = 0
     var currentAnswerButtons: [UIButton] = [UIButton]()
-    var currentGame: CurrentGame = CurrentGame()
     var noMoreAlphabetPressAllowed: Bool = false
     @IBOutlet weak var timerView: UIView!
     @IBOutlet weak var timerLabel: UILabel!
@@ -29,7 +26,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var alphabetButtonArray: [UIButton]!
     @IBOutlet weak var currentAnswerView: UIView!
     @IBOutlet weak var hintButton: UIButton!
-
+    var currentQuestionIndex = 0
+    var currentQuestion = Question()
+    var countdownTimer = Timer()
+    var countDownSeconds: Int = countDownTimerInSeconds
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -53,36 +53,39 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             $0.layer.cornerRadius = 10
         }
     }
+    
     func startCountdownTimer() {
         countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.updateCountdownTimer), userInfo: nil, repeats: true)
     }
     
     @objc func updateCountdownTimer() {
-        
         countdownLabel.text = "\(countDownSeconds)"
         countDownSeconds -= 1
         
-        if(countDownSeconds == -2)
+        if(countDownSeconds == -1)
         {
             stopTimer(timer: countdownTimer)
-            getQuestionByLevel(level: Level.Easy)
-            startMainTimer()
-            countdownLabel.isHidden = true
-            questionLabel.isHidden = false
-            keyboard.isHidden = false
-            hintButton.isHidden = false
-            timerView.isHidden = false
+            
+            Game.sharedGame.start() {
+                self.startMainTimer()
+                self.countdownLabel.isHidden = true
+                self.questionLabel.isHidden = false
+                self.keyboard.isHidden = false
+                self.hintButton.isHidden = false
+                self.timerView.isHidden = false
+                self.displayNextQuestion()
+            }
         }
-    }
-    
-    func startMainTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.updateMainTimer), userInfo: nil, repeats: true)
     }
     
     func stopTimer(timer: Timer) {
         if timer != nil {
             timer.invalidate()
         }
+    }
+
+    func startMainTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(self.updateMainTimer), userInfo: nil, repeats: true)
     }
     
     @objc func updateMainTimer() {
@@ -104,13 +107,16 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func getQuestionByLevel(level: Level) {
-        // TODO kullanıcı level'ı önceki sayfadan alınacak
-        question.getQuestionByLevel(level: level)
-        questionLabel.text = question.question
-        currentAnswerButtons.removeAll()
-        initAnswerButtonArray(question.answer.count)
-        noMoreAlphabetPressAllowed = false
+    func getNextQuestion() {
+        currentQuestion = (Game.sharedGame.questionSet[currentQuestionIndex] as? Question)!
+    }
+    func displayNextQuestion() {
+        getNextQuestion()
+        self.questionLabel.text = currentQuestion.question
+        self.currentAnswerButtons.removeAll()
+        self.noMoreAlphabetPressAllowed = false
+        self.initAnswerButtonArray(currentQuestion.answer.count)
+        currentQuestionIndex += 1
     }
     
     func initAnswerButtonArray(_ answerLength: Int) {
@@ -119,6 +125,10 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         if(answerLength > 6) {
             buttonWidth = 45
             buttonHeight = 55
+        }
+        if(answerLength > 8) {
+            buttonWidth = 35
+            buttonHeight = 45
         }
         let screenSize = UIScreen.main.bounds
         let screenWidth = Int(screenSize.width)
@@ -150,7 +160,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         noMoreAlphabetPressAllowed = true
         counter = 0
         
-        let mainAnswer = question.answer.uppercased()
+        let mainAnswer = currentQuestion.answer.uppercased()
         
         for button in currentAnswerButtons {
             userAnswer += button.currentTitle!
@@ -176,10 +186,11 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
             self.cleanButtons()
-            self.getQuestionByLevel(level: Level.Middle)
+            self.displayNextQuestion()
             self.initAnswerButtons()
         })
     }
+    
     
     @IBAction func alphabetKeyPressed(_ sender: UIButton) {
         if(!noMoreAlphabetPressAllowed) {
@@ -227,7 +238,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         // cevabın tamamının yazıldıp yazılmadığı kontorlü yapılıyor
         
         let randomIndex = Int(arc4random_uniform(UInt32(hintArray.count)))
-        let mainAnswer = question.answer.uppercased()
+        let mainAnswer = currentQuestion.answer.uppercased()
         
         if(hintArray.count > 0) {
             let answerIndex = mainAnswer.index(mainAnswer.startIndex, offsetBy: hintArray[randomIndex])
@@ -235,8 +246,8 @@ class GameViewController: UIViewController, UITextFieldDelegate {
             currentAnswerButtons[hintArray[randomIndex]].backgroundColor = UIColor.lightGray
         }
         
-        if(currentGame.hintCount > 0) {
-        currentGame.hintCount -= 1
+        if(Game.sharedGame.hintCount > 0) {
+            Game.sharedGame.hintCount -= 1
         } else {
             hintButton.isEnabled = false
         }

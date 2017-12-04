@@ -11,4 +11,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Database'
 pod 'Firebase/RemoteConfig'
 pod 'FirebaseUI'
+pod 'Alamofire', '~> 4.5'
+pod 'SwiftyJSON' 
+pod 'Cards'
+pod 'WCLShineButton'
 end

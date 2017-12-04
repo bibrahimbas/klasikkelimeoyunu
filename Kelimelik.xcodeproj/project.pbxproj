@@ -24,12 +24,20 @@
 		212921C21FA8924200070792 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C11FA8924200070792 /* User.swift */; };
 		212921C41FA8B8ED00070792 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C31FA8B8ED00070792 /* Constants.swift */; };
 		212921C61FA8BD4D00070792 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212921C51FA8BD4D00070792 /* WelcomeViewController.swift */; };
+		212BA7421FD17B7B0053DA9A /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BA7411FD17B7B0053DA9A /* GameEngine.swift */; };
 		2151BB801FB597C000FE6AE3 /* versionNotes.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2151BB7F1FB597C000FE6AE3 /* versionNotes.rtf */; };
 		215291801FB910EB00AFDFB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2152917F1FB910EA00AFDFB6 /* GoogleService-Info.plist */; };
+		21774ED61FC81F14004B326D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21774ED51FC81F14004B326D /* ProfileViewController.swift */; };
+		2192B5C21FC42F570096EFEC /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5C11FC42F570096EFEC /* PersistencyManager.swift */; };
+		2192B5C41FC42FBE0096EFEC /* LoginServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5C31FC42FBE0096EFEC /* LoginServiceAPI.swift */; };
+		2192B5C61FC42FCF0096EFEC /* HTTPClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5C51FC42FCF0096EFEC /* HTTPClientManager.swift */; };
+		2192B5C81FC432810096EFEC /* DataServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5C71FC432810096EFEC /* DataServiceAPI.swift */; };
+		2192B5CB1FC44FA80096EFEC /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2192B5CA1FC44FA80096EFEC /* UserView.swift */; };
+		21A78AD81FCD6036007DEA10 /* HTTPClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A78AD71FCD6036007DEA10 /* HTTPClientAPI.swift */; };
 		21E671731FAB494900C6F59A /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671721FAB494900C6F59A /* JSONManager.swift */; };
 		21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671751FAB4D3B00C6F59A /* DummyApiService.swift */; };
 		21E671781FAB672000C6F59A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E671771FAB672000C6F59A /* Utilities.swift */; };
-		21FEF2CD1FB8C57100639F88 /* CurrentGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEF2CC1FB8C57100639F88 /* CurrentGame.swift */; };
+		21FEF2CD1FB8C57100639F88 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEF2CC1FB8C57100639F88 /* Game.swift */; };
 		21FEF2CF1FB8EC4C00639F88 /* NewUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FEF2CE1FB8EC4C00639F88 /* NewUserViewController.swift */; };
 		7EC0B76E0E28340183E109D9 /* Pods_Kelimelik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */; };
 /* End PBXBuildFile section */
@@ -76,13 +84,21 @@
 		212921C11FA8924200070792 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		212921C31FA8B8ED00070792 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		212921C51FA8BD4D00070792 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		212BA7411FD17B7B0053DA9A /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		2151BB7F1FB597C000FE6AE3 /* versionNotes.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = versionNotes.rtf; sourceTree = "<group>"; };
 		2152917F1FB910EA00AFDFB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2171DD33B693BFC6B22E8557 /* Pods-Kelimelik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kelimelik.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik.debug.xcconfig"; sourceTree = "<group>"; };
+		21774ED51FC81F14004B326D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2192B5C11FC42F570096EFEC /* PersistencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		2192B5C31FC42FBE0096EFEC /* LoginServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceAPI.swift; sourceTree = "<group>"; };
+		2192B5C51FC42FCF0096EFEC /* HTTPClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientManager.swift; sourceTree = "<group>"; };
+		2192B5C71FC432810096EFEC /* DataServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceAPI.swift; sourceTree = "<group>"; };
+		2192B5CA1FC44FA80096EFEC /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		21A78AD71FCD6036007DEA10 /* HTTPClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientAPI.swift; sourceTree = "<group>"; };
 		21E671721FAB494900C6F59A /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		21E671751FAB4D3B00C6F59A /* DummyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyApiService.swift; sourceTree = "<group>"; };
 		21E671771FAB672000C6F59A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		21FEF2CC1FB8C57100639F88 /* CurrentGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGame.swift; sourceTree = "<group>"; };
+		21FEF2CC1FB8C57100639F88 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		21FEF2CE1FB8EC4C00639F88 /* NewUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserViewController.swift; sourceTree = "<group>"; };
 		EFDC816A142DE92CBD65A017 /* Pods_Kelimelik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kelimelik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,15 +166,15 @@
 		21036D2B1FA73EE50029B70D /* Kelimelik */ = {
 			isa = PBXGroup;
 			children = (
+				21146A0C1FD1DF25002D9E54 /* Storyboards */,
+				2192B5C91FC44F9B0096EFEC /* View */,
+				2192B5BF1FC42B000096EFEC /* LibraryAPI */,
+				2192B5C01FC42F3E0096EFEC /* Model */,
 				215291811FB910F200AFDFB6 /* SupportingFiles */,
 				21E671741FAB4D1100C6F59A /* Helpers */,
 				21036D641FA77D8C0029B70D /* Controllers */,
-				21036D5D1FA747C90029B70D /* Classes */,
 				21036D2C1FA73EE50029B70D /* AppDelegate.swift */,
-				21036D2E1FA73EE50029B70D /* ViewController.swift */,
-				21036D301FA73EE50029B70D /* Main.storyboard */,
 				21036D361FA73EE50029B70D /* Assets.xcassets */,
-				21036D381FA73EE50029B70D /* LaunchScreen.storyboard */,
 				21036D3B1FA73EE50029B70D /* Info.plist */,
 				21036D331FA73EE50029B70D /* Kelimelik.xcdatamodeld */,
 			);
@@ -183,28 +199,26 @@
 			path = KelimelikUITests;
 			sourceTree = "<group>";
 		};
-		21036D5D1FA747C90029B70D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				21036D5E1FA747E30029B70D /* LoginManager.swift */,
-				21E671721FAB494900C6F59A /* JSONManager.swift */,
-				212921C11FA8924200070792 /* User.swift */,
-				212921C31FA8B8ED00070792 /* Constants.swift */,
-				2119B93E1FB1C7600060E2EE /* Question.swift */,
-				21FEF2CC1FB8C57100639F88 /* CurrentGame.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		21036D641FA77D8C0029B70D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				21036D2E1FA73EE50029B70D /* ViewController.swift */,
 				21036D651FA77DA90029B70D /* LoginViewController.swift */,
 				212921C51FA8BD4D00070792 /* WelcomeViewController.swift */,
 				2119B93C1FB1AAB00060E2EE /* GameViewController.swift */,
 				21FEF2CE1FB8EC4C00639F88 /* NewUserViewController.swift */,
+				21774ED51FC81F14004B326D /* ProfileViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		21146A0C1FD1DF25002D9E54 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				21036D301FA73EE50029B70D /* Main.storyboard */,
+				21036D381FA73EE50029B70D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		2151BB7C1FB594D700FE6AE3 /* Notes */ = {
@@ -221,6 +235,40 @@
 				2152917F1FB910EA00AFDFB6 /* GoogleService-Info.plist */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		2192B5BF1FC42B000096EFEC /* LibraryAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2192B5C11FC42F570096EFEC /* PersistencyManager.swift */,
+				2192B5C31FC42FBE0096EFEC /* LoginServiceAPI.swift */,
+				21036D5E1FA747E30029B70D /* LoginManager.swift */,
+				2192B5C51FC42FCF0096EFEC /* HTTPClientManager.swift */,
+				21A78AD71FCD6036007DEA10 /* HTTPClientAPI.swift */,
+				2192B5C71FC432810096EFEC /* DataServiceAPI.swift */,
+			);
+			path = LibraryAPI;
+			sourceTree = "<group>";
+		};
+		2192B5C01FC42F3E0096EFEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21E671721FAB494900C6F59A /* JSONManager.swift */,
+				21FEF2CC1FB8C57100639F88 /* Game.swift */,
+				212921C31FA8B8ED00070792 /* Constants.swift */,
+				2119B93E1FB1C7600060E2EE /* Question.swift */,
+				212921C11FA8924200070792 /* User.swift */,
+				212BA7411FD17B7B0053DA9A /* GameEngine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2192B5C91FC44F9B0096EFEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2192B5CA1FC44FA80096EFEC /* UserView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		21E671741FAB4D1100C6F59A /* Helpers */ = {
@@ -409,15 +457,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Kelimelik/Pods-Kelimelik-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/WCLShineButton/WCLShineButton.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
@@ -427,15 +480,20 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WCLShineButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
@@ -474,18 +532,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				21036D2F1FA73EE50029B70D /* ViewController.swift in Sources */,
-				21FEF2CD1FB8C57100639F88 /* CurrentGame.swift in Sources */,
+				21FEF2CD1FB8C57100639F88 /* Game.swift in Sources */,
 				212921C61FA8BD4D00070792 /* WelcomeViewController.swift in Sources */,
 				21E671781FAB672000C6F59A /* Utilities.swift in Sources */,
 				21036D351FA73EE50029B70D /* Kelimelik.xcdatamodeld in Sources */,
+				2192B5C41FC42FBE0096EFEC /* LoginServiceAPI.swift in Sources */,
 				2119B93D1FB1AAB00060E2EE /* GameViewController.swift in Sources */,
+				21A78AD81FCD6036007DEA10 /* HTTPClientAPI.swift in Sources */,
+				212BA7421FD17B7B0053DA9A /* GameEngine.swift in Sources */,
+				2192B5CB1FC44FA80096EFEC /* UserView.swift in Sources */,
 				212921C21FA8924200070792 /* User.swift in Sources */,
+				2192B5C81FC432810096EFEC /* DataServiceAPI.swift in Sources */,
+				2192B5C21FC42F570096EFEC /* PersistencyManager.swift in Sources */,
 				21FEF2CF1FB8EC4C00639F88 /* NewUserViewController.swift in Sources */,
 				21036D2D1FA73EE50029B70D /* AppDelegate.swift in Sources */,
 				21E671761FAB4D3B00C6F59A /* DummyApiService.swift in Sources */,
+				2192B5C61FC42FCF0096EFEC /* HTTPClientManager.swift in Sources */,
 				2119B93F1FB1C7600060E2EE /* Question.swift in Sources */,
 				212921C41FA8B8ED00070792 /* Constants.swift in Sources */,
 				21036D661FA77DA90029B70D /* LoginViewController.swift in Sources */,
+				21774ED61FC81F14004B326D /* ProfileViewController.swift in Sources */,
 				21E671731FAB494900C6F59A /* JSONManager.swift in Sources */,
 				21036D5F1FA747E30029B70D /* LoginManager.swift in Sources */,
 			);
